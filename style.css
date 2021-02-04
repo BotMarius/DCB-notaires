@@ -1,0 +1,585 @@
+/*
+Theme Name: WP Bootstrap
+Theme URI: http://techguymedia.com
+Author: Brad Traversy
+Author URI: http://techguymedia.com
+Description: Simple Bootstrap Wordpress Theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: techguymedia
+*/
+
+/*
+ * Globals
+ */
+
+
+@font-face {
+  font-family: ‘Gilroy‘;
+  src: url(‘fonts/’);
+  src: url(‘wpf.eot?#iefix’) format(’embedded-opentype’),
+  url(‘wpf.woff2′) format(‘woff2’),
+  url(‘wpf.woff’) format(‘woff’),
+  url(‘wpf.ttf’) format(‘truetype’),
+  url(‘wpf.svg#svgwpf‘) format(‘svg’);
+  }
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+}
+
+
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+}
+
+h1,
+.h1 {
+  font-weight: 400;
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 60px;
+}
+
+h2,
+.h2 {
+  font-weight: 400;
+  font-size: 26px;
+  color: #a42334;
+}
+
+h3,
+.h3 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+}
+
+h4,
+.h4 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #a42334;
+}
+
+h5,
+.h5 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #a42334;
+}
+
+p{
+  font-weight: 400;
+  font-size: 15px;
+  color: #666;
+}
+
+.btn {
+  border-radius: 30px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #a42334;
+  border-color: #a42334;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #962130;
+  border-color:#962130;
+}
+
+
+.logo {
+  filter: invert(19%) sepia(89%) saturate(2321%) hue-rotate(335deg) brightness(80%) contrast(92%);
+  max-width: 20%!important;
+}
+
+.bgBoxe:hover .logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(344deg) brightness(103%) contrast(101%);
+}
+
+.box{
+  margin: 30px 0;
+}
+
+.bgBoxe:hover p{
+  color: #fff;
+}
+
+.bgBoxe:hover h4{
+  color: #fff;
+}
+
+
+.bgBoxe  h4{
+  color: #000;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+
+/*
+ * NAVBAR
+ */
+nav {
+  background-color: #666;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 1rem;;
+}
+
+.ouioui {
+  display: flex;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+  color: #852330;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #a42334;
+}
+
+.navbar-collapse {
+  flex-grow: 0.5;
+}
+
+.navbar-nav > li{
+  margin: 0 30px;
+}
+
+
+
+.navbar img{
+  position: relative;
+  z-index: 3;
+}
+
+
+
+#menu-main-menu li:last-child{
+  background-color: #a42334;
+  padding: 0 13px;
+  border-radius: 2em;
+}
+
+.dropdown-menu li:last-child{
+  padding: 0 !important;
+  background-color: transparent!important;
+  border-radius: 0!important;
+}
+
+.dropdown-menu li:last-child span{
+  color: #000;
+}
+
+nav ul li:last-child span{
+  color: #fff;
+}
+
+
+
+
+@media screen and (max-width: 720px) {
+  .navbar-collapse {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: #a42334cb;
+    transition: height .4s ease;
+  }
+
+  .navbar img{
+    width: 50%;
+  }
+
+  .navbar-light .navbar-nav .active>.nav-link {
+    color: #ffffffcb;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color:#fff;
+    text-align: center;
+  }
+
+  /*.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }*/
+}
+
+.navbar-light .navbar-toggler-icon{
+  background-image: url("img/menu.svg");
+}
+
+.navbar-light .navbar-toggler{
+  border-color: transparent;
+}
+
+.navbar-toggler-icon{
+  position: relative;
+  z-index: 3;
+}
+
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.pager>li>a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Page de base style
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+
+.blog-post-title {
+  margin-bottom: 5px;
+}
+
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/* HOME */
+
+.box p {
+  text-align: center;
+}
+
+.box .fas {
+  color: #a42334;
+}
+
+.boxes {
+  text-align: center;
+  color: #000;
+}
+
+
+
+.bgBoxe:hover{
+  background-color: #a42334 !important;
+  color: #fff;
+  border-radius: 0px 50px;
+}
+
+/* 720px cassure mobil nav*/
+/*Section 1*/
+
+.siteSection {
+  padding: 7rem 0;
+}
+
+.img-years {
+  position: relative;
+  display: block;
+  margin-left: 10%;
+}
+
+.img-years .year {
+  width: 200px;
+  height: 150px;
+  border-radius: 0 50px;
+  background: #a42334;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  transform: translate(-50%, 50%);
+}
+
+.img-years .year > span {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  display: block;
+  line-height: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.img-years .year > span > span {
+  line-height: 1.2;
+  display: block;
+  font-size: .8rem;
+}
+
+.textSection1{
+  padding: 0 8%;
+}
+
+/*
+Page équipe
+*/
+
+ .test{
+  width: 120px;
+  height: 100px;
+  border-radius: 0 30px;
+  background: #a42334;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  transform: translate(-50%, -130%);
+  top: 0;
+  display:none;
+ }
+
+
+ 
+
+/*
+block slider
+*/
+
+
+.n2-ss-slide-background{
+  border-radius: 200px 0px; 
+ }
+
+ .diapo {
+  position: relative;
+  display: block;
+  margin-bottom: 150px;
+}
+
+.diapo .year {
+  width: 200px;
+  height: 150px;
+  border-radius: 0 50px;
+  background: #a42334;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  transform: translate(-50%, 50%);
+}
+
+
+/*
+ * Footer
+ */
+
+.home-footer {
+  background-color: #a42334 !important;
+  color: #fff;
+  border-radius: 19em/10em 0 0 0;
+}
+
+.home-footer h3 {
+  color: #fff;
+  font-size: 18px;
+}
+
+.home-footer .row {
+  margin: 0px;
+}
+
+.page-wrapper {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .page-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.footer-nav,
+.footer-nav ul {
+  margin: 0;
+  padding: 0 0 20px 0;
+  padding-bottom: 20px;
+  list-style-type: none;
+}
+
+.footer-nav li {
+  line-height: 13px;
+  padding-bottom: 7px;
+  color: #dfdfdf;
+}
+
+.footer-nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav li a:hover {
+  color: #999;
+}
+
+.pb20 {
+  padding-bottom: 20px !important;
+}
+
+.widget-container.widget_text img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.aligncenter,
+.wp-caption.aligncenter {
+  margin: 5px auto;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyright {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  padding-top: 30px;
+}
